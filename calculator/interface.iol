@@ -10,6 +10,8 @@ type AvgRequest:void {
 interface CalculatorInterface {
 RequestResponse:
     sum(CalcRequest)(int)
+RequestResponse:
     mul(CalcRequest)(int)
+RequestResponse:
     avg(AvgRequest)(int)
 }

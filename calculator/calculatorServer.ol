@@ -15,8 +15,8 @@ main {
     }
     avg( request )( response ) {
         response = 0
-        foreach( i : request.values ) {
-            response = response + i
+        for( i = 0, i < #request.values, i = i + 1 ) {
+            response = response + request.values[i]
         }
         response = response / #request.values
     }
