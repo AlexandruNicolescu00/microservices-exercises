@@ -1,11 +1,14 @@
 type LoginRequest: void {
     .username: string
-    .password: string
 }
 
 type BankOperation: void {
     .sid: string
     .value?: double
+}
+
+type BankAccount: string {
+    .money: double
 }
 
 interface BankAccountInterface {
