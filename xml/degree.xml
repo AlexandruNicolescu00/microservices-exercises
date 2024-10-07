@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<degree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3schools.com degree.xsd">
+  <course>
+    <title>ARCHITETTURE SOFTWARE A MICROSERVIZI</title>
+    <professor>
+      <name>Davide Rossi</name>
+      <matriculaId>a1</matriculaId>
+    </professor>
+    <professor>
+      <name>Ivan Lanese</name>
+      <matriculaId>a2</matriculaId>
+    </professor>
+    <cfus>6</cfus>
+  </course>
+
+  <course>
+    <title>COMPLEX SYSTEMS AND NETWORK SCIENCE</title>
+    <professor>
+      <name>Ozalp Babaoglu</name>
+      <matriculaId>a3</matriculaId>
+    </professor>
+    <cfus>6</cfus>
+  </course>
+
+  <course>
+    <title>FONDAMENTI LOGICI DELL'INFORMATICA</title>
+    <professor>
+      <name>Luca Padovani</name>
+      <matriculaId>a4</matriculaId>
+    </professor>
+    <professor>
+      <name>Claudio Sacerdoti Coen</name>
+      <matriculaId>a5</matriculaId>
+    </professor>
+    <cfus>6</cfus>
+  </course>
+</degree>

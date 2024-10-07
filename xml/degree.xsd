@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:element name="degree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="course" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="course">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element ref="professor" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="cfus" type="xs:positiveInteger"/>
+      </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="professor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="matriculaId" type="xs:ID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+<!-- 
+<xs:element name="degree" type="degreeType"/>
+
+<xs:complexType name="degreeType">
+  <xs:sequence>
+    <xs:element ref="course" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+ -->
