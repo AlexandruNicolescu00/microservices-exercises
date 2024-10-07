@@ -1,1 +1,3 @@
-# jolie-exercises
+# Microservices-exercises
+Unibo microservices course exercises 
+
