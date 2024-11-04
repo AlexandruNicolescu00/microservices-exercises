@@ -1,1 +1,23 @@
-( (buyLowPriceItem:buyer -> seller ; buyLowPriceItem:seller -> buyer) + (buyHighPriceItem:buyer -> seller | buyHighPriceItem:helper -> seller ; buyHighPriceItem:seller -> buyer))*
+C = checkCatalogue:buyer -> seller ; sendCatalogue:seller -> buyer ;
+( 
+    (buyLowPriceItem:buyer -> seller ; buyLowPriceItem:seller -> buyer)
+     + ((buyHighPriceItem:buyer -> seller | askForHelp:buyer -> helper ; buyHighPriceItem:helper -> seller) ;
+         buyHighPriceItem:seller -> buyer)
+)*
+
+projection on buyer
+checkCatalogue^@seller; sendCatalogue@seller;
+
+((buyLowPriceItem^@seller; buyLowPriceItem@seller) +
+(buyHighPriceItem^@seller | askForHelp^@helper; buyHighPriceItem@seller))*
+
+projection on seller
+checkCatalogue@buyer; sendCatalogue^@buyer;
+
+((buyLowPriceItem@buyer; buyLowPriceItem^@buyer) +
+(buyHighPriceItem@buyer | askForHelp@helper; buyHighPriceItem^@buyer))*
+
+projection on helper
+1
+(1 +
+(1 | askForHelp@buyer; buyHighPriceItem^@seller))*
